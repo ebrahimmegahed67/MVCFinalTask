@@ -1,0 +1,19 @@
+﻿@model employee
+<style>
+    span{
+        color:red;
+    }
+</style>
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title"><span>First Name: </span> @Model.fName</h5>
+        <h5 class="card-title"><span>Last Name: </span>@Model.lName</h5>
+        <h5 class="card-title"><span>Salary: </span>@Model.salary</h5>
+        <h5 class="card-title"><span>SSN </span>@Model.ssn</h5>
+        <h5 class="card-title"><span>SuperSsn : </span>@Model.supeerSSN</h5>
+        <h5 class="card-title"><span>DNum: </span>@Model.DNO</h5>
+        <h5 class="card-title"><span>Address: </span>@Model.address</h5>
+        <h5 class="card-title"><span>BDate: </span>@Model.BDate</h5>
+        <h5 class="card-title"><span>Sex: </span>@Model.Sex</h5>
+    </div>
+</div>

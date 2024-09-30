@@ -1,0 +1,44 @@
+﻿@model List<employee>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Fisrt Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">SSN</th>
+            <th scope="col">Address</th>
+            <th scope="col">Salary</th>
+            <th scope="col">Sex</th>
+            <th scope="col">BDate</th>
+            <th scope="col">SuperSSN</th>
+            <th scope="col">DNO</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <th scope="row">@item.fName</th>
+                <td>@item.lName</td>
+                <td>@item.ssn</td>
+                <td>@item.address</td>
+                <td>@item.salary</td>
+                <td>@item.Sex</td>
+                <td>@item.BDate</td>
+                <td>@item.supeerSSN</td>
+
+                <td>@item.DNO</td>  
+                <td>
+                    <a href="/employee/GoToEdit/@item.ssn">Edit</a>
+                    </td>
+                <td>
+                    <a href="/employee/GoToDelete/@item.ssn">Delete</a>
+                    </td>
+            </tr>
+        }
+       
+    </tbody>
+</table>

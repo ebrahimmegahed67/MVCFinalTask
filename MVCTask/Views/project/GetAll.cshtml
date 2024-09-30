@@ -1,0 +1,31 @@
+﻿@model List<project>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Project Name</th>
+            <th scope="col">Project Num</th>
+            <th scope="col">Project Location</th>
+            <th scope="col">Dept Num</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">@item.Pname</th>
+                <td>@item.Pnum</td>
+                <td>@item.Plocation</td>
+                <td>@item.Dnum</td>
+              @*   <td>
+                    <a href="/employee/GoToEdit/@item.ssn">Edit</a>
+                </td>
+                <td>
+                    <a href="/employee/GoToDelete/@item.ssn">Delete</a>
+                </td> *@
+            </tr>
+        }
+
+    </tbody>
+</table>
+

@@ -1,0 +1,54 @@
+﻿@model employee
+<form asp-action="SaveAddedData" asp-controller="employee">
+    <div asp-validation-summary="All"></div>
+    <div class="form-group">
+        <label asp-for="fName">First Name</label>
+        <input type="text" class="form-control" asp-for="fName"  aria-describedby="emailHelp" placeholder="first name..">
+        <span asp-validation-for="fName"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="lName">Last Name</label>
+        <input type="text" class="form-control" asp-for="lName" placeholder="last name">
+        <span asp-validation-for="lName"></span>
+
+    </div> <div class="form-group">
+        <label asp-for="address">Address</label>
+        <input type="text" class="form-control" asp-for="address" placeholder="address">
+        <span asp-validation-for="address"></span>
+
+    </div> 
+    </div> <div class="form-group">
+        <label asp-for="Sex">Sex</label>
+        <input type="text" class="form-control" asp-for="Sex" placeholder="sex">
+        <span asp-validation-for="Sex"></span>
+
+    </div> 
+    <div class="form-group">
+        <label asp-for="salary">Salary</label>
+        <input type="number" class="form-control" asp-for="salary" placeholder="salary">
+        <span asp-validation-for="salary"></span>
+
+    </div> 
+    <div class="form-group">
+        <label asp-for="BDate">Birth Date</label>
+        <input type="date" class="form-control" asp-for="BDate" placeholder="B Date">
+        <span asp-validation-for="BDate"></span>
+
+    </div> 
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="inputState">State</label>
+                <select id="inputState" asp-for="DNO" class="form-control">
+                @foreach (department item in ViewBag.dept_id)
+                    {
+                        <option value="@item.DNum">@item.dName</option>
+                    }
+                </select>
+            </div>
+
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>
+<script src="/lib/jquery/dist/jquery.min.js"></script>
+<script src="/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>

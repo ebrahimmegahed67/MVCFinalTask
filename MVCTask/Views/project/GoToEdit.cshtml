@@ -1,0 +1,43 @@
+﻿@model project
+
+<form asp-action="SaveEditData" asp-controller="project">
+    <div asp-validation-summary="All"></div>
+    <div class="form-group">
+
+        <input type="hidden" asp-for="Pnum" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Pname">project name</label>
+        <input type="text" class="form-control" asp-for="Pname" aria-describedby="emailHelp" placeholder="project name..">
+        <span asp-validation-for="Pname"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Plocation">project loaction</label>
+        <input type="text" class="form-control" asp-for="Plocation" placeholder="project location">
+        <span asp-validation-for="Plocation"></span>
+
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="inputState">Department</label>
+                <select id="inputState" asp-for="Dnum" class="form-control">
+                    @foreach (department item in ViewBag.dept_id)
+                    {
+                        if (Model.Dnum == item.DNum)
+                        {
+                            <option value="@item.DNum" selected>@item.dName</option>
+                        }
+                        else
+                        {
+                            <option value="@item.DNum">@item.dName</option>
+                        }
+                    }
+                </select>
+            </div>
+
+        </div>
+
+        <button type="submit" class="btn btn-primary">Edit</button>
+</form>
+
+
+

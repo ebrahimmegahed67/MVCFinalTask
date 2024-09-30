@@ -1,0 +1,28 @@
+﻿@model department
+
+<form asp-action="SaveEditData" asp-controller="department">
+    <div asp-validation-summary="All"></div>
+    <div class="form-group">
+
+        <input type="hidden" asp-for="DNum" />
+    </div>
+    <div class="form-group">
+        <label asp-for="dName">Dept Name</label>
+        <input type="text" class="form-control" asp-for="dName" aria-describedby="emailHelp" placeholder="Dept name..">
+        <span asp-validation-for="dName"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="MGRSSN">MGRSSN</label>
+        <input type="text" class="form-control" asp-for="MGRSSN" placeholder="MGRSSN">
+        <span asp-validation-for="MGRSSN"></span>
+
+    </div> <div class="form-group">
+        <label asp-for="MGRStartDate">MGR SD</label>
+        <input type="text" class="form-control" asp-for="MGRStartDate" placeholder="MGR SD">
+        <span asp-validation-for="MGRStartDate"></span>
+
+    </div>
+    <button type="submit" class="btn btn-primary">Edit</button>
+</form>
+
+

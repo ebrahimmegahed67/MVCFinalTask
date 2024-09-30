@@ -1,0 +1,14 @@
+﻿@model department
+<style>
+    span {
+        color: red;
+    }
+</style>
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title"><span>Dept Name: </span> @Model.dName</h5>
+        <h5 class="card-title"><span>Dept Num: </span>@Model.DNum</h5>
+        <h5 class="card-title"><span>MGR ssn: </span>@Model.MGRSSN</h5>
+        <h5 class="card-title"><span>MGR SD </span>@Model.MGRStartDate</h5>
+    </div>
+</div>

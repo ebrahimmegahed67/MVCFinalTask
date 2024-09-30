@@ -1,0 +1,45 @@
+﻿@model List<department>
+<style>
+    .ok{
+        text-transform:capitalize;
+    }
+</style>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Dept Name</th>
+            <th scope="col">Dept Num</th>
+            <th scope="col">MgrSSn</th>
+            <th scope="col">MGR SD</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th class="ok" scope="row">@item.dName</th>
+                <td class="ok">@item.DNum</td>
+                <td class="ok">@item.MGRSSN</td>
+                <td class="ok">@item.MGRStartDate</td>
+                <td>
+                 <a href="/department/GoToEdit/@item.DNum">
+                     Edit
+                 </a>
+                </td> 
+                <td>
+                    <a href="/department/GoToDelete/@item.DNum">
+                     Delete
+                 </a>
+                </td>
+               @*  <td>
+                    <a href="/employee/GoToEdit/@item.ssn">Edit</a>
+                </td>
+                <td>
+                    <a href="/employee/GoToDelete/@item.ssn">Delete</a>
+                </td> *@
+            </tr>
+        }
+
+    </tbody>
+</table>

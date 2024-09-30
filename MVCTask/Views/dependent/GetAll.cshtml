@@ -1,0 +1,33 @@
+﻿@model List<dependent>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Essn</th>
+            <th scope="col">Dependent Name</th>
+            <th scope="col">Sex</th>
+            <th scope="col">BDate</th>
+            <th scope="col">relation</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">@item.essn</th>
+                <td>@item.dependentName</td>
+                <td>@item.sex</td>
+                <td>@item.BDate</td>
+                <td>@item.realation</td>
+                @*   <td>
+            <a href="/employee/GoToEdit/@item.ssn">Edit</a>
+            </td>
+            <td>
+            <a href="/employee/GoToDelete/@item.ssn">Delete</a>
+            </td> *@
+            </tr>
+        }
+
+    </tbody>
+</table>
+
